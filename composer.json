@@ -1,0 +1,6 @@
+{
+    "require": {
+        "hoa/compiler": "~3.0",
+        "hoa/Cli": "^2.16"
+    }
+}
