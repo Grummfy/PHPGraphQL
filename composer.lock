@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "eb4c18a1970c4dfb63e00b9c77944f1c",
     "content-hash": "ff426f7833a8b8f6fb05a088e3995573",
     "packages": [
         {
             "name": "hoa/cli",
-            "version": "2.16.11.19",
+            "version": "2.17.01.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Cli.git",
-                "reference": "83f37acb3505516f084f5d38d04f12edb776814d"
+                "reference": "2ffec3815f3d38b626c7611b7a3ac023182ca558"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Cli/zipball/83f37acb3505516f084f5d38d04f12edb776814d",
-                "reference": "83f37acb3505516f084f5d38d04f12edb776814d",
+                "url": "https://api.github.com/repos/hoaproject/Cli/zipball/2ffec3815f3d38b626c7611b7a3ac023182ca558",
+                "reference": "2ffec3815f3d38b626c7611b7a3ac023182ca558",
                 "shasum": ""
             },
             "require": {
@@ -60,20 +59,20 @@
                 "hoa",
                 "library"
             ],
-            "time": "2016-11-19 18:52:54"
+            "time": "2017-01-11T08:15:01+00:00"
         },
         {
             "name": "hoa/compiler",
-            "version": "3.16.10.24",
+            "version": "3.17.01.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Compiler.git",
-                "reference": "4d67607432dc29c09abf17d5b69ccbe7f236961f"
+                "reference": "4730a839280539e42ba6ef69fa5ce1b64be43b9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Compiler/zipball/4d67607432dc29c09abf17d5b69ccbe7f236961f",
-                "reference": "4d67607432dc29c09abf17d5b69ccbe7f236961f",
+                "url": "https://api.github.com/repos/hoaproject/Compiler/zipball/4730a839280539e42ba6ef69fa5ce1b64be43b9d",
+                "reference": "4730a839280539e42ba6ef69fa5ce1b64be43b9d",
                 "shasum": ""
             },
             "require": {
@@ -142,20 +141,20 @@
                 "trace",
                 "uniform"
             ],
-            "time": "2016-10-24 13:59:13"
+            "time": "2017-01-10T09:27:21+00:00"
         },
         {
             "name": "hoa/consistency",
-            "version": "1.16.03.03",
+            "version": "1.17.05.02",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Consistency.git",
-                "reference": "aa7e30f99aa2ae476f83800d3ad350506eec153b"
+                "reference": "fd7d0adc82410507f332516faf655b6ed22e4c2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Consistency/zipball/aa7e30f99aa2ae476f83800d3ad350506eec153b",
-                "reference": "aa7e30f99aa2ae476f83800d3ad350506eec153b",
+                "url": "https://api.github.com/repos/hoaproject/Consistency/zipball/fd7d0adc82410507f332516faf655b6ed22e4c2f",
+                "reference": "fd7d0adc82410507f332516faf655b6ed22e4c2f",
                 "shasum": ""
             },
             "require": {
@@ -191,11 +190,11 @@
                 },
                 {
                     "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
+                    "homepage": "https://hoa-project.net/"
                 }
             ],
             "description": "The Hoa\\Consistency library.",
-            "homepage": "http://hoa-project.net/",
+            "homepage": "https://hoa-project.net/",
             "keywords": [
                 "autoloader",
                 "callable",
@@ -205,20 +204,20 @@
                 "keyword",
                 "library"
             ],
-            "time": "2016-03-03 09:37:24"
+            "time": "2017-05-02T12:18:12+00:00"
         },
         {
             "name": "hoa/console",
-            "version": "3.16.11.08",
+            "version": "3.17.05.02",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Console.git",
-                "reference": "079d9b8235756470811f20f8f2e83de7ed6cc532"
+                "reference": "e231fd3ea70e6d773576ae78de0bdc1daf331a66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Console/zipball/079d9b8235756470811f20f8f2e83de7ed6cc532",
-                "reference": "079d9b8235756470811f20f8f2e83de7ed6cc532",
+                "url": "https://api.github.com/repos/hoaproject/Console/zipball/e231fd3ea70e6d773576ae78de0bdc1daf331a66",
+                "reference": "e231fd3ea70e6d773576ae78de0bdc1daf331a66",
                 "shasum": ""
             },
             "require": {
@@ -281,20 +280,20 @@
                 "tput",
                 "window"
             ],
-            "time": "2016-11-08 13:17:30"
+            "time": "2017-05-02T12:26:19+00:00"
         },
         {
             "name": "hoa/dispatcher",
-            "version": "1.16.01.15",
+            "version": "1.17.05.02",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Dispatcher.git",
-                "reference": "a0ea27587a0a12ddcee6a00fac5ebc158a2186c3"
+                "reference": "8144e7c8364241ffd78c60989068ec03ee510b7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Dispatcher/zipball/a0ea27587a0a12ddcee6a00fac5ebc158a2186c3",
-                "reference": "a0ea27587a0a12ddcee6a00fac5ebc158a2186c3",
+                "url": "https://api.github.com/repos/hoaproject/Dispatcher/zipball/8144e7c8364241ffd78c60989068ec03ee510b7d",
+                "reference": "8144e7c8364241ffd78c60989068ec03ee510b7d",
                 "shasum": ""
             },
             "require": {
@@ -333,30 +332,30 @@
                 },
                 {
                     "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
+                    "homepage": "https://hoa-project.net/"
                 }
             ],
             "description": "The Hoa\\Dispatcher library.",
-            "homepage": "http://hoa-project.net/",
+            "homepage": "https://hoa-project.net/",
             "keywords": [
                 "dispatcher",
                 "kit",
                 "library"
             ],
-            "time": "2016-01-14 20:52:21"
+            "time": "2017-05-02T12:27:07+00:00"
         },
         {
             "name": "hoa/event",
-            "version": "1.16.11.19",
+            "version": "1.17.01.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Event.git",
-                "reference": "a2cea8dc46a133517ec322520c3a8bf015ac0cbb"
+                "reference": "6c0060dced212ffa3af0e34bb46624f990b29c54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Event/zipball/a2cea8dc46a133517ec322520c3a8bf015ac0cbb",
-                "reference": "a2cea8dc46a133517ec322520c3a8bf015ac0cbb",
+                "url": "https://api.github.com/repos/hoaproject/Event/zipball/6c0060dced212ffa3af0e34bb46624f990b29c54",
+                "reference": "6c0060dced212ffa3af0e34bb46624f990b29c54",
                 "shasum": ""
             },
             "require": {
@@ -399,20 +398,20 @@
                 "listener",
                 "observer"
             ],
-            "time": "2016-11-19 18:56:37"
+            "time": "2017-01-13T15:30:50+00:00"
         },
         {
             "name": "hoa/exception",
-            "version": "1.16.11.08",
+            "version": "1.17.01.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Exception.git",
-                "reference": "8c961c0e50b57ae6696ef2aea2b161b18f13b201"
+                "reference": "091727d46420a3d7468ef0595651488bfc3a458f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Exception/zipball/8c961c0e50b57ae6696ef2aea2b161b18f13b201",
-                "reference": "8c961c0e50b57ae6696ef2aea2b161b18f13b201",
+                "url": "https://api.github.com/repos/hoaproject/Exception/zipball/091727d46420a3d7468ef0595651488bfc3a458f",
+                "reference": "091727d46420a3d7468ef0595651488bfc3a458f",
                 "shasum": ""
             },
             "require": {
@@ -453,20 +452,20 @@
                 "exception",
                 "library"
             ],
-            "time": "2016-11-08 13:18:12"
+            "time": "2017-01-16T07:53:27+00:00"
         },
         {
             "name": "hoa/file",
-            "version": "1.16.01.15",
+            "version": "1.17.01.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/File.git",
-                "reference": "bc04ddb476bfeee03c2be585fc37a98d2887277b"
+                "reference": "f6bf9f236067789d888e8343ccc5f1053c4f6692"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/File/zipball/bc04ddb476bfeee03c2be585fc37a98d2887277b",
-                "reference": "bc04ddb476bfeee03c2be585fc37a98d2887277b",
+                "url": "https://api.github.com/repos/hoaproject/File/zipball/f6bf9f236067789d888e8343ccc5f1053c4f6692",
+                "reference": "f6bf9f236067789d888e8343ccc5f1053c4f6692",
                 "shasum": ""
             },
             "require": {
@@ -501,11 +500,11 @@
                 },
                 {
                     "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
+                    "homepage": "https://hoa-project.net/"
                 }
             ],
             "description": "The Hoa\\File library.",
-            "homepage": "http://hoa-project.net/",
+            "homepage": "https://hoa-project.net/",
             "keywords": [
                 "Socket",
                 "directory",
@@ -515,20 +514,20 @@
                 "link",
                 "temporary"
             ],
-            "time": "2016-01-14 20:55:07"
+            "time": "2017-01-13T15:21:48+00:00"
         },
         {
             "name": "hoa/iterator",
-            "version": "2.16.11.19",
+            "version": "2.17.01.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Iterator.git",
-                "reference": "41db0d981caafe094a0b9801542b5dc74a2d175e"
+                "reference": "d1120ba09cb4ccd049c86d10058ab94af245f0cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Iterator/zipball/41db0d981caafe094a0b9801542b5dc74a2d175e",
-                "reference": "41db0d981caafe094a0b9801542b5dc74a2d175e",
+                "url": "https://api.github.com/repos/hoaproject/Iterator/zipball/d1120ba09cb4ccd049c86d10058ab94af245f0cc",
+                "reference": "d1120ba09cb4ccd049c86d10058ab94af245f0cc",
                 "shasum": ""
             },
             "require": {
@@ -569,20 +568,20 @@
                 "iterator",
                 "library"
             ],
-            "time": "2016-11-19 18:54:01"
+            "time": "2017-01-10T10:34:47+00:00"
         },
         {
             "name": "hoa/math",
-            "version": "1.16.08.29",
+            "version": "1.17.05.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Math.git",
-                "reference": "8be67cc378b043ccdd5896a3f1bb276af032f258"
+                "reference": "7150785d30f5d565704912116a462e9f5bc83a0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Math/zipball/8be67cc378b043ccdd5896a3f1bb276af032f258",
-                "reference": "8be67cc378b043ccdd5896a3f1bb276af032f258",
+                "url": "https://api.github.com/repos/hoaproject/Math/zipball/7150785d30f5d565704912116a462e9f5bc83a0c",
+                "reference": "7150785d30f5d565704912116a462e9f5bc83a0c",
                 "shasum": ""
             },
             "require": {
@@ -618,11 +617,11 @@
                 },
                 {
                     "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
+                    "homepage": "https://hoa-project.net/"
                 }
             ],
             "description": "The Hoa\\Math library.",
-            "homepage": "http://hoa-project.net/",
+            "homepage": "https://hoa-project.net/",
             "keywords": [
                 "arrangement",
                 "combination",
@@ -634,20 +633,20 @@
                 "sampler",
                 "set"
             ],
-            "time": "2016-08-29 13:29:51"
+            "time": "2017-05-16T08:02:17+00:00"
         },
         {
             "name": "hoa/protocol",
-            "version": "1.16.07.07",
+            "version": "1.17.01.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Protocol.git",
-                "reference": "28fc998fac9c7364338ec98177fef353e76e4efb"
+                "reference": "5c2cf972151c45f373230da170ea015deecf19e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Protocol/zipball/28fc998fac9c7364338ec98177fef353e76e4efb",
-                "reference": "28fc998fac9c7364338ec98177fef353e76e4efb",
+                "url": "https://api.github.com/repos/hoaproject/Protocol/zipball/5c2cf972151c45f373230da170ea015deecf19e2",
+                "reference": "5c2cf972151c45f373230da170ea015deecf19e2",
                 "shasum": ""
             },
             "require": {
@@ -682,11 +681,11 @@
                 },
                 {
                     "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
+                    "homepage": "https://hoa-project.net/"
                 }
             ],
             "description": "The Hoa\\Protocol library.",
-            "homepage": "http://hoa-project.net/",
+            "homepage": "https://hoa-project.net/",
             "keywords": [
                 "library",
                 "protocol",
@@ -694,20 +693,20 @@
                 "stream",
                 "wrapper"
             ],
-            "time": "2016-07-07 21:03:43"
+            "time": "2017-01-14T12:26:10+00:00"
         },
         {
             "name": "hoa/regex",
-            "version": "1.16.09.06",
+            "version": "1.17.01.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Regex.git",
-                "reference": "2a787a49cc53a9ea009a1997085da9aff091e918"
+                "reference": "7e263a61b6fb45c1d03d8e5ef77668518abd5bec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Regex/zipball/2a787a49cc53a9ea009a1997085da9aff091e918",
-                "reference": "2a787a49cc53a9ea009a1997085da9aff091e918",
+                "url": "https://api.github.com/repos/hoaproject/Regex/zipball/7e263a61b6fb45c1d03d8e5ef77668518abd5bec",
+                "reference": "7e263a61b6fb45c1d03d8e5ef77668518abd5bec",
                 "shasum": ""
             },
             "require": {
@@ -740,30 +739,30 @@
                 },
                 {
                     "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
+                    "homepage": "https://hoa-project.net/"
                 }
             ],
             "description": "The Hoa\\Regex library.",
-            "homepage": "http://hoa-project.net/",
+            "homepage": "https://hoa-project.net/",
             "keywords": [
                 "compiler",
                 "library",
                 "regex"
             ],
-            "time": "2016-09-06 11:08:23"
+            "time": "2017-01-13T16:10:24+00:00"
         },
         {
             "name": "hoa/router",
-            "version": "3.16.01.14",
+            "version": "3.17.01.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Router.git",
-                "reference": "ecbd82ce37882701c36f85712b8e6129cea1a6ef"
+                "reference": "8f09a2ed672f8cbf33d2e7e2e9db9181f1925b91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Router/zipball/ecbd82ce37882701c36f85712b8e6129cea1a6ef",
-                "reference": "ecbd82ce37882701c36f85712b8e6129cea1a6ef",
+                "url": "https://api.github.com/repos/hoaproject/Router/zipball/8f09a2ed672f8cbf33d2e7e2e9db9181f1925b91",
+                "reference": "8f09a2ed672f8cbf33d2e7e2e9db9181f1925b91",
                 "shasum": ""
             },
             "require": {
@@ -793,31 +792,31 @@
                 },
                 {
                     "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
+                    "homepage": "https://hoa-project.net/"
                 }
             ],
             "description": "The Hoa\\Router library.",
-            "homepage": "http://hoa-project.net/",
+            "homepage": "https://hoa-project.net/",
             "keywords": [
                 "cli",
                 "http",
                 "library",
                 "router"
             ],
-            "time": "2016-01-14 21:11:16"
+            "time": "2017-01-14T12:27:58+00:00"
         },
         {
             "name": "hoa/stream",
-            "version": "1.16.11.08",
+            "version": "1.17.02.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Stream.git",
-                "reference": "3c29ffee2cf70b6f219c29ee6ed676a1b06c1308"
+                "reference": "3293cfffca2de10525df51436adf88a559151d82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Stream/zipball/3c29ffee2cf70b6f219c29ee6ed676a1b06c1308",
-                "reference": "3c29ffee2cf70b6f219c29ee6ed676a1b06c1308",
+                "url": "https://api.github.com/repos/hoaproject/Stream/zipball/3293cfffca2de10525df51436adf88a559151d82",
+                "reference": "3293cfffca2de10525df51436adf88a559151d82",
                 "shasum": ""
             },
             "require": {
@@ -825,6 +824,9 @@
                 "hoa/event": "~1.0",
                 "hoa/exception": "~1.0",
                 "hoa/protocol": "~1.0"
+            },
+            "require-dev": {
+                "hoa/test": "~2.0"
             },
             "type": "library",
             "extra": {
@@ -865,20 +867,20 @@
                 "stream",
                 "wrapper"
             ],
-            "time": "2016-11-08 13:09:12"
+            "time": "2017-02-21T16:01:06+00:00"
         },
         {
             "name": "hoa/ustring",
-            "version": "4.16.01.11",
+            "version": "4.17.01.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Ustring.git",
-                "reference": "9f76b9aae5901b4f476ef854e29ccd746d6899d2"
+                "reference": "e6326e2739178799b1fe3fdd92029f9517fa17a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Ustring/zipball/9f76b9aae5901b4f476ef854e29ccd746d6899d2",
-                "reference": "9f76b9aae5901b4f476ef854e29ccd746d6899d2",
+                "url": "https://api.github.com/repos/hoaproject/Ustring/zipball/e6326e2739178799b1fe3fdd92029f9517fa17a0",
+                "reference": "e6326e2739178799b1fe3fdd92029f9517fa17a0",
                 "shasum": ""
             },
             "require": {
@@ -914,31 +916,31 @@
                 },
                 {
                     "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
+                    "homepage": "https://hoa-project.net/"
                 }
             ],
             "description": "The Hoa\\Ustring library.",
-            "homepage": "http://hoa-project.net/",
+            "homepage": "https://hoa-project.net/",
             "keywords": [
                 "library",
                 "search",
                 "string",
                 "unicode"
             ],
-            "time": "2016-01-11 09:51:34"
+            "time": "2017-01-16T07:08:25+00:00"
         },
         {
             "name": "hoa/visitor",
-            "version": "2.16.01.11",
+            "version": "2.17.01.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Visitor.git",
-                "reference": "cb21074b7eb89c3ac9f76d25c72671d579735ca9"
+                "reference": "c18fe1cbac98ae449e0d56e87469103ba08f224a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Visitor/zipball/cb21074b7eb89c3ac9f76d25c72671d579735ca9",
-                "reference": "cb21074b7eb89c3ac9f76d25c72671d579735ca9",
+                "url": "https://api.github.com/repos/hoaproject/Visitor/zipball/c18fe1cbac98ae449e0d56e87469103ba08f224a",
+                "reference": "c18fe1cbac98ae449e0d56e87469103ba08f224a",
                 "shasum": ""
             },
             "require": {
@@ -969,31 +971,31 @@
                 },
                 {
                     "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
+                    "homepage": "https://hoa-project.net/"
                 }
             ],
             "description": "The Hoa\\Visitor library.",
-            "homepage": "http://hoa-project.net/",
+            "homepage": "https://hoa-project.net/",
             "keywords": [
                 "library",
                 "structure",
                 "visit",
                 "visitor"
             ],
-            "time": "2016-01-11 09:54:01"
+            "time": "2017-01-16T07:02:03+00:00"
         },
         {
             "name": "hoa/zformat",
-            "version": "1.16.03.15",
+            "version": "1.17.01.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Zformat.git",
-                "reference": "d261637aa6f4485d697ebcb898a379f7a34b4e34"
+                "reference": "522c381a2a075d4b9dbb42eb4592dd09520e4ac2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Zformat/zipball/d261637aa6f4485d697ebcb898a379f7a34b4e34",
-                "reference": "d261637aa6f4485d697ebcb898a379f7a34b4e34",
+                "url": "https://api.github.com/repos/hoaproject/Zformat/zipball/522c381a2a075d4b9dbb42eb4592dd09520e4ac2",
+                "reference": "522c381a2a075d4b9dbb42eb4592dd09520e4ac2",
                 "shasum": ""
             },
             "require": {
@@ -1022,17 +1024,17 @@
                 },
                 {
                     "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
+                    "homepage": "https://hoa-project.net/"
                 }
             ],
             "description": "The Hoa\\Zformat library.",
-            "homepage": "http://hoa-project.net/",
+            "homepage": "https://hoa-project.net/",
             "keywords": [
                 "library",
                 "parameter",
                 "zformat"
             ],
-            "time": "2016-03-15 14:55:30"
+            "time": "2017-01-10T10:39:54+00:00"
         }
     ],
     "packages-dev": [],
