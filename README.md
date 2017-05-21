@@ -1,13 +1,18 @@
 # GraphQL Parser for PHP
 
-```php
+```bash
 php src/GraphQL.php 
 ```
 
-```php
-cat src/data.txt | vendor/bin/hoa compiler:pp src/GraphQL.pp 0 --visitor dump
+```bash
+cat resources/good/7.gql | vendor/bin/hoa compiler:pp src/GraphQL.pp 0 --visitor dump
+cat resources/good/7.gql | vendor/bin/hoa compiler:pp src/GraphQL.pp 0 --token-sequence
 ```
 
+```bash
+php src/check-from-example.php resources/good/7.gql 1
+php src/check-from-example.php
+```
 
 # #spec
 
