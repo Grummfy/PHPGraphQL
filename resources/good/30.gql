@@ -1,0 +1,12 @@
+{
+  mainAccount {
+    drafts(first: 20) {
+      ...previewInfo
+    }
+  }
+}
+
+fragment previewInfo on Email {
+  subject
+  bodyPreviewSentence
+}

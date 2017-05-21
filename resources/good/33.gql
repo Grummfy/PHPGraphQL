@@ -1,0 +1,18 @@
+{
+  hero {
+    name
+    friends(first:2) {
+      totalCount
+      edges {
+        node {
+          name
+        }
+        cursor
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}

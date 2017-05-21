@@ -1,0 +1,8 @@
+query {
+  hero {
+    name
+  }
+  droid(id: "2000") {
+    name
+  }
+}

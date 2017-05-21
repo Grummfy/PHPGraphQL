@@ -1,0 +1,6 @@
+query HeroForEpisode($ep: Episode!) {
+  hero(episode: $ep) {
+    name
+    primaryFunction
+  }
+}

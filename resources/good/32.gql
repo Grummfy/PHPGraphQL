@@ -1,0 +1,11 @@
+{
+  hero {
+    name
+    friends(first:2) {
+      node {
+        name
+      }
+      cursor
+    }
+  }
+}

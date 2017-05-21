@@ -1,0 +1,18 @@
+{
+  hero {
+    name
+    friendsConnection(first:2 after:"Y3Vyc29yMQ==") {
+      totalCount
+      edges {
+        node {
+          name
+        }
+        cursor
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}

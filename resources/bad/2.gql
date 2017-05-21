@@ -1,0 +1,13 @@
+{
+  hero {
+    ...NameAndAppearancesAndFriends
+  }
+}
+
+fragment NameAndAppearancesAndFriends on Character {
+  name
+  appearsIn
+  friends {
+    ...NameAndAppearancesAndFriends
+  }
+}

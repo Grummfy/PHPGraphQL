@@ -1,0 +1,5 @@
+type Starship {
+  id: ID!
+  name: String!
+  length(unit: LengthUnit = METER): Float
+}

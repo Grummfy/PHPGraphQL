@@ -1,0 +1,10 @@
+{
+  hero {
+    name
+    ...DroidFields
+  }
+}
+
+fragment DroidFields on Droid {
+  primaryFunction
+}
