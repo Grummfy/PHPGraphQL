@@ -5,6 +5,7 @@
 %token  mutation		mutation
 %token  fragment		fragment
 %token	on				on
+%token  quote           "
 %token  name            ([_A-Za-z][_0-9A-Za-z]*)
 %token  brace_          {
 %token _brace           }
@@ -73,10 +74,16 @@ number:
 	<number>
 
 #Value:
-	Variable() | number() | Name() | BooleanValue() | EnumValue() | ListValue() | ObjectValue()
+	Variable() | number() | Name() | BooleanValue() | StringValue() | EnumValue() | ListValue() | ObjectValue()
 
 BooleanValue:
 	<true> | <false>
+
+#StringValue:
+	::quote:: ::quote:: | StringCharacter()*
+
+StringCharacter:
+	Name()
 
 #EnumValue:
 	Name()*
@@ -101,7 +108,7 @@ BooleanValue:
 	::parenthesis_:: Argument()* ::_parenthesis::
 
 #Argument:
-	Name() ::colon:: Value()
+	Name() ::colon:: Value() | Name() ::colon:: ::quote:: Value() ::quote::
 
 #SelectionSet:
 	::brace_:: Selection()* ::_brace::

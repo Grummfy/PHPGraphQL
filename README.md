@@ -14,7 +14,10 @@ php src/check-from-example.php resources/good/7.gql 1
 php src/check-from-example.php
 ```
 
-# #spec
+## Documentation
 
-* http://graphql.org/learn/
-* http://facebook.github.io/graphql/
+* [GraphQl presentation](http://graphql.org/learn/)
+* [The specs](http://facebook.github.io/graphql/)
+
+## GraphQL version supported
+octobre 2016
