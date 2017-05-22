@@ -13,7 +13,7 @@
 %token _bracket         \]
 %token  parenthesis_    \(
 %token _parenthesis     \)
-%token  pipe            |
+%token  pipe            '|'
 %token  colon           :
 %token  dollar			\$
 %token  exclamation		!
