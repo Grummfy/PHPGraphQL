@@ -14,7 +14,10 @@ if (!$fileToCheck)
 	echo PHP_EOL, '-----------', PHP_EOL, array_sum($result), '/', count($result), PHP_EOL;
 
 	echo PHP_EOL, 'Check invalid resources:', PHP_EOL;
+	$current = error_reporting();
+	$current = error_reporting(E_ALL^E_WARNING);
 	$result = checkGraphQl(__DIR__ . '/../resources/bad', false, $compiler);
+	error_reporting($current);
 	echo PHP_EOL, '-----------', PHP_EOL, array_sum($result), '/', count($result), PHP_EOL;
 }
 else
