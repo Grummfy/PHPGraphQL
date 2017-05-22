@@ -39,13 +39,6 @@ OperationType:
 Name:
 	<name>
 
-#FragmentDefinition:
-	::fragment:: FragmentName() TypeCondition() Directives() SelectionSet()
-
-#FragmentName:
-	Name()
-// TODO Name but no "on" 
-
 #TypeCondition:
 	Name() ::on::
 
@@ -124,6 +117,10 @@ StringCharacter:
 
 #FragmentDefinition:
 	::fragment:: FragmentName() TypeCondition() Directives()? SelectionSet()
+
+#FragmentName:
+	Name()
+// TODO Name but no "on"
 
 #Field:
 	Alias()? Name() Arguments()? Directives()? SelectionSet()?	
