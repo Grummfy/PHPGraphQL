@@ -20,7 +20,11 @@ if (!$fileToCheck)
 else
 {
 	$fileToCheck = new SplFileInfo($fileToCheck);
-	checkTheValidityOfAFile((bool) $argv[2], $compiler, $fileToCheck, true);
+
+	echo $fileToCheck->getFilename();
+	$result = checkTheValidityOfAFile((bool) $argv[2], $compiler, $fileToCheck, true);
+	echo printResult($result), PHP_EOL;
+
 }
 
 function isResultGood($result, $shouldBeValid)
