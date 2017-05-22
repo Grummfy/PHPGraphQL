@@ -1,7 +1,7 @@
 // TODO we should also skip comment line (line tat start with "#")
 %skip   ignored         [\xfeff\x20\x09\x0a\x0d]+
 
-%token  query			query 		
+%token  query			query
 %token  mutation		mutation
 %token  fragment		fragment
 %token  subscription    subscription
@@ -14,7 +14,7 @@
 %token _bracket         \]
 %token  parenthesis_    \(
 %token _parenthesis     \)
-%token  pipe            '|'
+%token  pipe            \x7c
 %token  colon           :
 %token  dollar			\$
 %token  exclamation		!
@@ -22,14 +22,12 @@
 %token  comma			,
 %token  at				@
 %token  threeDots		\.\.\.
-%token  space           [\u0009\u0020]
-%token  endLine         [\u000A\u000D]
 %token  anchor          #
 %token  true            true
 %token  false           false
 %token  null			null
 %token  number          \-?(0|[1-9][0-9]*)(\.[0-9]+)?([eE][\+\-]?[0-9]+)?
-%token  character       [\u0009\u000A\u000D\u0020-\uFFFF]
+%token  character       [\x0009\x000A\x000D\x0020-\xFFFF]
 
 #Document:
 	Definition()* | Comment()
@@ -152,10 +150,7 @@ Punctuator:
 	::exclamation:: | ::dollar:: | ::parenthesis_:: | ::_parenthesis:: | ::threeDots:: | ::colon:: | ::equals:: | ::at:: | ::bracket_:: | ::_bracket:: | ::brace_:: | ::pipe:: | ::_brace::
 
 #Comment:
-	::anchor:: SourceCharacter()? <endLine>
-
-WhiteSpace:
-	<space>*
+	::anchor:: SourceCharacter()?
 
 SourceCharacter:
 	<character>*
