@@ -65,7 +65,7 @@ OperationType:
 
 
 #Value:
-	Variable() | Number() | StringValue() | BooleanValue() | StringValue() | NullValue() | EnumValue() | ListValue() | ObjectValue()
+	StringValue() | Variable() | Number() | StringValue() | BooleanValue() | NullValue() | EnumValue() | ListValue() | ObjectValue()
 
 BooleanValue:
 	<true> | <false>
@@ -77,7 +77,7 @@ NullValue:
 	::quote:: ::quote:: | StringCharacter()*
 
 StringCharacter:
-	Name()
+	::quote:: Name() ::quote:: | Name()
 
 #EnumValue:
 	Name()*
