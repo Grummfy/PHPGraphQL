@@ -1,4 +1,4 @@
-// we should also skip comment line (line tat start with "#")
+// TODO we should also skip comment line (line tat start with "#")
 %skip   ignored         [\xfeff\x20\x09\x0a\x0d]+
 
 %token  query			query 		
@@ -113,7 +113,7 @@ StringCharacter:
 	::brace_:: Selection()* ::_brace::
 
 #Selection:
-	Field() | FragmentSpread() | InlineFragment() | Comment()
+	Comment() | Field() | FragmentSpread() | InlineFragment()
 
 #FragmentSpread:
 	::threeDots:: FragmentName() Directives()?
@@ -132,7 +132,7 @@ StringCharacter:
 // TODO help on this one Name but not "on"
 
 #Field:
-	Alias()? Name() Arguments()? Directives()? SelectionSet()?	
+	Comment() | Alias()? Name() Arguments()? Directives()? SelectionSet()?
 
 #Alias:
 	Name() ::colon::
