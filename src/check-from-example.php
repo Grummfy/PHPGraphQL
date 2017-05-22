@@ -10,10 +10,12 @@ $compiler = Hoa\Compiler\Llk\Llk::load(new Hoa\File\Read(__DIR__ . '/GraphQL.pp'
 if (!$fileToCheck)
 {
 	echo 'Check valid resources:', PHP_EOL;
-	checkGraphQl(__DIR__ . '/../resources/good', true, $compiler);
+	$result = checkGraphQl(__DIR__ . '/../resources/good', true, $compiler);
+	echo PHP_EOL, '-----------', PHP_EOL, array_sum($result), '/', count($result), PHP_EOL;
 
-	echo '----------', PHP_EOL, 'Check invalid resources:', PHP_EOL;
-	checkGraphQl(__DIR__ . '/../resources/bad', false, $compiler);
+	echo PHP_EOL, 'Check invalid resources:', PHP_EOL;
+	$result = checkGraphQl(__DIR__ . '/../resources/bad', false, $compiler);
+	echo PHP_EOL, '-----------', PHP_EOL, array_sum($result), '/', count($result), PHP_EOL;
 }
 else
 {
@@ -23,11 +25,17 @@ else
 
 function isResultGood($result, $shouldBeValid)
 {
-	return $shouldBeValid && $result ? ' ✓' : ' ✗';
+	return ($shouldBeValid && $result);
+}
+
+function printResult($result)
+{
+	return $result ? ' ✓' : ' ✗';
 }
 
 function checkGraphQl($path, $shouldBeValid, Hoa\Compiler\Llk\Parser $compiler)
 {
+	$results = array();
 	foreach (new DirectoryIterator($path) as $fileInfo)
 	{
 		if ($fileInfo->isDir() || $fileInfo->isDot() || $fileInfo->getExtension() != 'gql')
@@ -35,24 +43,31 @@ function checkGraphQl($path, $shouldBeValid, Hoa\Compiler\Llk\Parser $compiler)
 			continue;
 		}
 
-		checkTheValidityOfAFile($shouldBeValid, $compiler, $fileInfo);
+		echo $fileInfo->getFilename();
+		$results[ $fileInfo->getFilename() ] = false;
+
+		$result = checkTheValidityOfAFile($shouldBeValid, $compiler, $fileInfo);
+		echo printResult($result), PHP_EOL;
+
+		$results[ $fileInfo->getFilename() ] = $result;
 	}
+
+	return $results;
 }
 
 function checkTheValidityOfAFile($shouldBeValid, Hoa\Compiler\Llk\Parser $compiler, SplFileInfo $fileInfo, $printException = false)
 {
-	echo $fileInfo->getFilename();
-
+	$result = false;
 	try
 	{
 		$content = file_get_contents($fileInfo->getRealPath());
 		$compiler->parse($content, null, false);
 
-		echo isResultGood(true, $shouldBeValid);
+		$result = isResultGood(true, $shouldBeValid);
 	}
 	catch (\Hoa\Compiler\Exception\UnexpectedToken $e)
 	{
-		echo isResultGood(false, $shouldBeValid);
+		$result = isResultGood(false, $shouldBeValid);
 		if ($printException)
 		{
 			echo $e;
@@ -60,12 +75,13 @@ function checkTheValidityOfAFile($shouldBeValid, Hoa\Compiler\Llk\Parser $compil
 	}
 	catch (\Hoa\Compiler\Exception\UnrecognizedToken $e)
 	{
-		//			var_dump($e->getMessage());
-		echo isResultGood(false, $shouldBeValid);
+
+		$result = isResultGood(false, $shouldBeValid);
 		if ($printException)
 		{
 			echo $e;
 		}
 	}
-	echo PHP_EOL;
+
+	return $result;
 }

@@ -4,6 +4,7 @@
 %token  query			query 		
 %token  mutation		mutation
 %token  fragment		fragment
+%token  subscription    subscription
 %token	on				on
 %token  quote           "
 %token  name            ([_A-Za-z][_0-9A-Za-z]*)
@@ -40,11 +41,8 @@
 	OperationType() Name()? VariableDefinitions()? Directives()? SelectionSet() | SelectionSet()
 
 OperationType:
-	<query> | <mutation>
+	<query> | <mutation> | <subscription>
 
-
-#TypeCondition:
-	Name() ::on::
 
 #VariableDefinitions:
 	::parenthesis_:: VariableDefinition()* ::_parenthesis::
@@ -69,10 +67,13 @@ OperationType:
 
 
 #Value:
-	Variable() | Number() | Name() | BooleanValue() | StringValue() | EnumValue() | ListValue() | ObjectValue()
+	Variable() | Number() | StringValue() | BooleanValue() | StringValue() | NullValue() | EnumValue() | ListValue() | ObjectValue()
 
 BooleanValue:
 	<true> | <false>
+
+NullValue:
+	<null>
 
 #StringValue:
 	::quote:: ::quote:: | StringCharacter()*
@@ -82,7 +83,7 @@ StringCharacter:
 
 #EnumValue:
 	Name()*
-// but not null, true or false
+// TODO help on this one but not null, true or false => http://facebook.github.io/graphql/#EnumValue
 
 #ListValue:
 	::bracket_:: ::_bracket:: | ::bracket_:: Value()* ::_bracket::
@@ -92,6 +93,7 @@ StringCharacter:
 
 #ObjectField:
 	Name() ::colon:: Value()
+
 
 #Directives:
 	Directive()*
@@ -103,7 +105,9 @@ StringCharacter:
 	::parenthesis_:: Argument()* ::_parenthesis::
 
 #Argument:
-	Name() ::colon:: Value() | Name() ::colon:: ::quote:: Value() ::quote::
+	Name() ::colon:: Value()
+
+
 
 #SelectionSet:
 	::brace_:: Selection()* ::_brace::
@@ -117,12 +121,15 @@ StringCharacter:
 #InlineFragment:
 	::threeDots:: TypeCondition()? Directives()? SelectionSet()
 
+#TypeCondition:
+	::on:: NamedType()
+
 #FragmentDefinition:
 	::fragment:: FragmentName() TypeCondition() Directives()? SelectionSet()
 
 #FragmentName:
 	Name()
-// TODO Name but no "on"
+// TODO help on this one Name but not "on"
 
 #Field:
 	Alias()? Name() Arguments()? Directives()? SelectionSet()?	
@@ -131,6 +138,9 @@ StringCharacter:
 	Name() ::colon::
 
 
+
+NamedType:
+	Name()
 
 Number:
 	<number>
