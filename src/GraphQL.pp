@@ -11,18 +11,24 @@
 %token _brace           }
 %token  bracket_        \[
 %token _bracket         \]
-%token  number          \-?(0|[1-9][0-9]*)(\.[0-9]+)?([eE][\+\-]?[0-9]+)?
 %token  parenthesis_    \(
 %token _parenthesis     \)
+%token  pipe            |
 %token  colon           :
 %token  dollar			\$
 %token  exclamation		!
 %token  equals			=
+%token  comma			,
+%token  at				@
+%token  threeDots		\.\.\.
+%token  space           [\u0009\u0020]
+%token  endLine         [\u000A\u000D]
+%token  anchor          #
 %token  true            true
 %token  false           false
 %token  null			null
-%token  at				@
-%token  threeDots		\.\.\.
+%token  number          \-?(0|[1-9][0-9]*)(\.[0-9]+)?([eE][\+\-]?[0-9]+)?
+%token  character       [\u0009\u000A\u000D\u0020-\uFFFF]
 
 #Document:
 	Definition()*
@@ -36,8 +42,6 @@
 OperationType:
 	<query> | <mutation>
 
-Name:
-	<name>
 
 #TypeCondition:
 	Name() ::on::
@@ -63,11 +67,9 @@ Name:
 #NonNullType:
 	Name() ::exclamation:: | ListType() ::exclamation::
 
-number:
-	<number>
 
 #Value:
-	Variable() | number() | Name() | BooleanValue() | StringValue() | EnumValue() | ListValue() | ObjectValue()
+	Variable() | Number() | Name() | BooleanValue() | StringValue() | EnumValue() | ListValue() | ObjectValue()
 
 BooleanValue:
 	<true> | <false>
@@ -127,3 +129,23 @@ StringCharacter:
 
 #Alias:
 	Name() ::colon::
+
+
+
+Number:
+	<number>
+
+Name:
+	<name>
+
+Punctuator:
+	::exclamation:: | ::dollar:: | ::parenthesis_:: | ::_parenthesis:: | ::threeDots:: | ::colon:: | ::equals:: | ::at:: | ::bracket_:: | ::_bracket:: | ::brace_:: | ::pipe:: | ::_brace::
+
+#Comment:
+	::anchor:: SourceCharacter()? <endLine>
+
+WhiteSpace:
+	<space>*
+
+SourceCharacter:
+	<character>*

@@ -18,7 +18,7 @@ if (!$fileToCheck)
 else
 {
 	$fileToCheck = new SplFileInfo($fileToCheck);
-	checkTheValidityOfAFile((bool) $argv[2], $compiler, $fileToCheck);
+	checkTheValidityOfAFile((bool) $argv[2], $compiler, $fileToCheck, true);
 }
 
 function isResultGood($result, $shouldBeValid)
@@ -39,7 +39,7 @@ function checkGraphQl($path, $shouldBeValid, Hoa\Compiler\Llk\Parser $compiler)
 	}
 }
 
-function checkTheValidityOfAFile($shouldBeValid, Hoa\Compiler\Llk\Parser $compiler, SplFileInfo $fileInfo)
+function checkTheValidityOfAFile($shouldBeValid, Hoa\Compiler\Llk\Parser $compiler, SplFileInfo $fileInfo, $printException = false)
 {
 	echo $fileInfo->getFilename();
 
@@ -53,11 +53,19 @@ function checkTheValidityOfAFile($shouldBeValid, Hoa\Compiler\Llk\Parser $compil
 	catch (\Hoa\Compiler\Exception\UnexpectedToken $e)
 	{
 		echo isResultGood(false, $shouldBeValid);
+		if ($printException)
+		{
+			echo $e;
+		}
 	}
 	catch (\Hoa\Compiler\Exception\UnrecognizedToken $e)
 	{
 		//			var_dump($e->getMessage());
 		echo isResultGood(false, $shouldBeValid);
+		if ($printException)
+		{
+			echo $e;
+		}
 	}
 	echo PHP_EOL;
 }
