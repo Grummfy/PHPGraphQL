@@ -32,10 +32,10 @@
 %token  character       [\u0009\u000A\u000D\u0020-\uFFFF]
 
 #Document:
-	Definition()*
+	Definition()* | Comment()
 
 #Definition:
-	OperationDefinition() | FragmentDefinition()
+	OperationDefinition() | FragmentDefinition() | Comment()
 
 #OperationDefinition:
 	OperationType() Name()? VariableDefinitions()? Directives()? SelectionSet() | SelectionSet()
@@ -113,7 +113,7 @@ StringCharacter:
 	::brace_:: Selection()* ::_brace::
 
 #Selection:
-	Field() | FragmentSpread() | InlineFragment()
+	Field() | FragmentSpread() | InlineFragment() | Comment()
 
 #FragmentSpread:
 	::threeDots:: FragmentName() Directives()?
