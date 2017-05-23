@@ -74,10 +74,10 @@ NullValue:
 	<null>
 
 #StringValue:
-	::quote:: ::quote:: | StringCharacter()*
+	::quote:: ::quote:: | ::quote:: StringCharacter()* ::quote:: | ::quote:: Number() ::quote::
 
 StringCharacter:
-	::quote:: Name() ::quote:: | Name()
+	Name() | <character>
 
 #EnumValue:
 	Name()*
@@ -150,7 +150,7 @@ Punctuator:
 	::exclamation:: | ::dollar:: | ::parenthesis_:: | ::_parenthesis:: | ::threeDots:: | ::colon:: | ::equals:: | ::at:: | ::bracket_:: | ::_bracket:: | ::brace_:: | ::pipe:: | ::_brace::
 
 #Comment:
-	::anchor:: SourceCharacter()?
+	::anchor:: SourceCharacter() | ::anchor:: StringCharacter()* | ::anchor::
 
 SourceCharacter:
 	<character>*
