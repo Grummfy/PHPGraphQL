@@ -1,5 +1,5 @@
 // TODO we should also skip comment line (line tat start with "#")
-%skip   ignored         [\xfeff\x20\x09\x0a\x0d]+
+%skip   ignored         [\x{feff}\x20\x09\x0a\x0d]+
 
 %token  query			query
 %token  mutation		mutation
