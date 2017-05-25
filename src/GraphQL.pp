@@ -6,7 +6,6 @@
 %token  fragment		fragment
 %token  subscription    subscription
 %token	on				on
-%token  quote           "
 %token  name            ([_A-Za-z][_0-9A-Za-z]*)
 %token  brace_          {
 %token _brace           }
@@ -14,20 +13,20 @@
 %token _bracket         \]
 %token  parenthesis_    \(
 %token _parenthesis     \)
-%token  pipe            \x7c
+// %token  pipe            \x7c
 %token  colon           :
 %token  dollar			\$
 %token  exclamation		!
 %token  equals			=
-%token  comma			,
 %token  at				@
 %token  threeDots		\.\.\.
-%token  anchor          #
+%token  comment         #|#[^\n]
 %token  true            true
 %token  false           false
 %token  null			null
 %token  number          \-?(0|[1-9][0-9]*)(\.[0-9]+)?([eE][\+\-]?[0-9]+)?
-%token  character       [\x0009\x000A\x000D\x0020-\xFFFF]
+%token  character       "([\x0009\x000A\x000D\x0020-\xFFFF]*)"
+%token  quote           "
 
 #Document:
 	Definition()* | Comment()
@@ -65,7 +64,7 @@ OperationType:
 
 
 #Value:
-	StringValue() | Variable() | Number() | StringValue() | BooleanValue() | NullValue() | EnumValue() | ListValue() | ObjectValue()
+	StringValue() | Variable() | Number() | BooleanValue() | NullValue() | EnumValue() | ListValue() | ObjectValue()
 
 BooleanValue:
 	<true> | <false>
@@ -74,10 +73,7 @@ NullValue:
 	<null>
 
 #StringValue:
-	::quote:: ::quote:: | ::quote:: StringCharacter()* ::quote:: | ::quote:: Number() ::quote::
-
-StringCharacter:
-	Name() | <character>
+	::quote:: ::quote:: | ::character:: | ::quote:: Number() ::quote::
 
 #EnumValue:
 	Name()*
@@ -146,11 +142,8 @@ Number:
 Name:
 	<name>
 
-Punctuator:
-	::exclamation:: | ::dollar:: | ::parenthesis_:: | ::_parenthesis:: | ::threeDots:: | ::colon:: | ::equals:: | ::at:: | ::bracket_:: | ::_bracket:: | ::brace_:: | ::pipe:: | ::_brace::
+//Punctuator:
+//	::exclamation:: | ::dollar:: | ::parenthesis_:: | ::_parenthesis:: | ::threeDots:: | ::colon:: | ::equals:: | ::at:: | ::bracket_:: | ::_bracket:: | ::brace_:: | ::pipe:: | ::_brace::
 
 #Comment:
-	::anchor:: SourceCharacter() | ::anchor:: StringCharacter()* | ::anchor::
-
-SourceCharacter:
-	<character>*
+	::comment::
