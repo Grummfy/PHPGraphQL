@@ -6,6 +6,7 @@
 %token  fragment		fragment
 %token  subscription    subscription
 %token	on				on
+%token  comment         #|#(.*)
 %token  name            ([_A-Za-z][_0-9A-Za-z]*)
 %token  brace_          {
 %token _brace           }
@@ -20,7 +21,6 @@
 %token  equals			=
 %token  at				@
 %token  threeDots		\.\.\.
-%token  comment         #|#[^\n]
 %token  true            true
 %token  false           false
 %token  null			null
