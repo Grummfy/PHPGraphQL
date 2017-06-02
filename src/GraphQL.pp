@@ -1,12 +1,11 @@
-// TODO we should also skip comment line (line tat start with "#")
-%skip   ignored         [\x{feff}\x20\x09\x0a\x0d]+
+// TODO we should also skip  line (line tat start with "#")
+%skip   ignored         [\x{feff}\x20\x09\x0a\x0d]+|#.+|#
 
 %token  query			query
 %token  mutation		mutation
 %token  fragment		fragment
 %token  subscription    subscription
 %token	on				on
-%token  comment         #|#(.*)
 %token  name            ([_A-Za-z][_0-9A-Za-z]*)
 %token  brace_          {
 %token _brace           }
@@ -29,10 +28,10 @@
 %token  quote           "
 
 #Document:
-	Definition()* | Comment()
+	Definition()*
 
 #Definition:
-	OperationDefinition() | FragmentDefinition() | Comment()
+	OperationDefinition() | FragmentDefinition()
 
 #OperationDefinition:
 	OperationType() Name()? VariableDefinitions()? Directives()? SelectionSet() | SelectionSet()
@@ -107,7 +106,7 @@ NullValue:
 	::brace_:: Selection()* ::_brace::
 
 #Selection:
-	Comment() | Field() | FragmentSpread() | InlineFragment()
+	Field() | FragmentSpread() | InlineFragment()
 
 #FragmentSpread:
 	::threeDots:: FragmentName() Directives()?
@@ -126,7 +125,7 @@ NullValue:
 // TODO help on this one Name but not "on"
 
 #Field:
-	Comment() | Alias()? Name() Arguments()? Directives()? SelectionSet()?
+	Alias()? Name() Arguments()? Directives()? SelectionSet()?
 
 #Alias:
 	Name() ::colon::
@@ -144,6 +143,3 @@ Name:
 
 //Punctuator:
 //	::exclamation:: | ::dollar:: | ::parenthesis_:: | ::_parenthesis:: | ::threeDots:: | ::colon:: | ::equals:: | ::at:: | ::bracket_:: | ::_bracket:: | ::brace_:: | ::pipe:: | ::_brace::
-
-#Comment:
-	::comment::
